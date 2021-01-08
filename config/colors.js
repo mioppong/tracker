@@ -1,0 +1,15 @@
+export default {
+  primaryDark: "#6694ff",
+  primary: "#ABC4FF",
+  secondary: "#B6CCFE",
+  third: "#C1D3FE",
+  fourth: "#CCDBFD",
+  fifth: "#D7E3FC",
+  sixth: "#E2EAFC",
+  seventh: "#EDF2FB",
+  facebook: "#4267B2",
+  mediumGray: "#6e6969",
+  lightGray: "#f8f4f4",
+  darkGray: "#0c0c0c",
+  white: "#fff",
+};
