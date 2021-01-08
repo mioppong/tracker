@@ -1,5 +1,3 @@
-import firebase from "firebase";
-
 /*
 DIDNT REALLY PAY ATTENTION CREATING THIS FILE, NOT REALLY USED MUCH, EXCEPT FOR POSTS I THINK
 /*/
@@ -25,27 +23,6 @@ if (user != null) {
   // this value to authenticate with your backend server, if
 }
 
-const getPosts = () => {
-  //  THIS METHOD GETS THE LIST OF POSTS NOT DOWNLOADED YET
-  firebase
-    .database()
-    .ref("/posts/")
-    .on("value", (snapshot) => {
-      var numOfMissingPosts = snapshot.numChildren() - postings.length;
-
-      if (numOfMissingPosts > 0) {
-        var array = [];
-        snapshot.forEach((snap) => {
-          array.push(snap);
-        });
-
-        for (let index = 0; index < numOfMissingPosts; index++) {
-          postings.unshift(array.pop());
-        }
-      }
-    });
-};
-
 //console.log("POSTING ARE ALL IJNTHE VARIABLE -----", postings);
 var initState = {
   user: {
@@ -68,7 +45,6 @@ const rootReducer = (state = initState, action) => {
     //SET USER INFORMATION HERE
   } else if (action.type === REFRESH) {
     //LOAD posts from people
-    getPosts();
   } else if (action.type === MESSAGE) {
     //IDK WHAT TO DO HERE' WE'' EVENTUALLY FIRURE IT OUT
   }
