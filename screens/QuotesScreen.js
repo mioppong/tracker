@@ -67,7 +67,7 @@ export default class QuotesScreen extends Component {
         <AppButton
           iconName="refresh"
           iconColor={colors.primaryDark}
-          style={styles.refreshButton}
+          style={styles.addItemButtomStyles}
           onPress={() => this.loadQuotes()}
         />
       </View>
@@ -76,6 +76,11 @@ export default class QuotesScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+  addItemButtomStyles: {
+    position: "absolute",
+    left: 0,
+    top: 0,
+  },
   container: {
     flex: 1,
     backgroundColor: colors.darkGray,

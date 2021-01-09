@@ -1,25 +1,9 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
-import AppButton from "./components/AppButton";
+import MainRoute from "./routes/MainRoute";
 import ListScreen from "./screens/ListScreen";
+import LoadingScreen from "./screens/LoadingScreen";
+import WelcomeScreen from "./screens/WelcomeScreen";
 
 export default function App() {
-  return <ListScreen />;
+  return <LoadingScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  buttonContainer: {
-    height: 200,
-    width: 200,
-  },
-  loginButton: {
-    height: 60,
-    width: 60,
-  },
-});
