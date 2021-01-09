@@ -3,9 +3,11 @@ import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import AppButton from "./components/AppButton";
 import ListScreen from "./screens/ListScreen";
+import LoadingScreen from "./screens/LoadingScreen";
+import WelcomeScreen from "./screens/WelcomeScreen";
 
 export default function App() {
-  return <ListScreen />;
+  return <WelcomeScreen />;
 }
 
 const styles = StyleSheet.create({
